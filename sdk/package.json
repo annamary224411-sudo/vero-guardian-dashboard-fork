@@ -1,0 +1,20 @@
+{
+  "name": "@vero-guardian/frontend-sdk",
+  "version": "0.1.0",
+  "description": "Typed frontend client for the Vero Guardian Soroban contract",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "API.md"],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "jest --config ../jest.config.js --runInBand sdk/tests",
+    "docs": "typedoc src/index.ts --out docs"
+  },
+  "peerDependencies": {
+    "@stellar/stellar-sdk": "^11.3.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.28.18"
+  }
+}
